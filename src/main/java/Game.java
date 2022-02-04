@@ -3,6 +3,8 @@ import processing.core.PApplet;
 public class Game extends PApplet {
 
     Ball ball = new Ball();
+    Racket racket = new Racket();
+    Wall wall = new Wall();
     /******Game Screen Declarations********/
     /*
     * Game Screen variables
@@ -94,8 +96,8 @@ public class Game extends PApplet {
         ball.health = ball.maxHealth;
         ball.ballX = width/4;
         ball.ballY = height/5;
-        lastAddTime = 0;
-        walls.clear();
+        wall.lastAddTime = 0;
+        wall.clear();
         gameScreen = 1;
     }
 
