@@ -97,7 +97,7 @@ public class Game extends PApplet {
         ball.ballX = width/4;
         ball.ballY = height/5;
         wall.lastAddTime = 0;
-        wall.clear();
+        wall.walls.clear();
         gameScreen = 1;
     }
 

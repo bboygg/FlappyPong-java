@@ -3,12 +3,13 @@ import processing.core.PConstants;
 
 public class Ball{
     PApplet p; //Object
+    Game game;
 
     /******BALL SETTINGS*****/
     //Ball Location, outfit
     public float ballX, ballY;
     public float ballSize = 20;
-    public float ballColor = p.color(0);
+    public int ballColor = p.color(   0);
 
     //Ball Speed
     public float ballSpeedVert = 0;
@@ -115,6 +116,13 @@ public class Ball{
         p.rectMode(PConstants.CORNER);
         p.rect(ballX - (healthBarWidth/2), ballY - 30, healthBarWidth * (health/maxHealth), 5, 28);
         //width will be change according to the health by maxHealth
+    }
+
+    public void decreaseHealth(){
+        health -= healthDecrease;
+        if(health <= 0){
+            game.gameOver();
+        }
     }
 
     public void score(){
