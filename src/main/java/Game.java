@@ -40,10 +40,10 @@ public class Game extends PApplet {
         ball.keepInScreen();
         ball.drawHealthBar();
         ball.printScore();
-        //drawRacket();
-        //watchRacketBounce();
-        //wallAdder();
-        //wallHandler();
+        racket.drawRacket();
+        racket.racketBounce();
+        wall.wallAdder();
+        wall.wallHandler();
     }
     public void gameOverScreen(){
         background(44, 62, 80);
